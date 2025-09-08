@@ -1,5 +1,5 @@
 const citacoes = [
-        {
+    {
         texto: "Aquilo que não me mata, fortalece-me.",
         autor: "Friedrich Nietzsche",
     },
@@ -18,7 +18,12 @@ const citacoes = [
 
 ];
 
-function generation() {
-    const textoCitacoes = getElementById('citacao')
-    const nomeAutor = getElementById('autor')
+function gerarCitacao() {
+    //const textoCitacoes = document.getElementById('citacao')
+    const gerar = Math.floor(Math.random() * citacoes.length);
+
+    const citacaoSorteada = citacoes[gerar];
+
+    document.getElementById('textoCitacao').innerHTML = `"${citacaoSorteada.texto}"`;
+    document.getElementById('autor').innerHTML = `-${citacaoSorteada.autor}`;
 }
