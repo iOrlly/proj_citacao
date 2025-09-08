@@ -1,11 +1,82 @@
+/* =======================================================
+   MODELO 4: GRADIENTE ANIMADO / CÓSMICO
+   ======================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* --- O EFEITO DO FUNDO ANIMADO --- */
 body {
-    background-color: bisque;
+    color: #f0f0f0;
     margin: 0;
+    background: linear-gradient(-45deg, #0e103d, #27184f, #3d2352, #1a2849); 
+    /* 2. O Truque: o fundo é 4x maior que a tela */
+    background-size: 400% 400%;
+    animation: animarFundo 15s ease infinite alternate;
 }
 
-div#citacao {
-    color: black;
-    margin: auto;
-    font-family: "Arial", serif;
-    font-size: 12px;
+h1 {
+    text-align: center;
+    margin-top: 100px
+}
+
+/* Centraliza o container na tela */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- O PAINEL DA CITAÇÃO COM EFEITO "VIDRO FOSCO" --- */
+div.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+    padding: 40px;
+    width: 90%;
+    height: 20vh;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* --- ESTILOS DO TEXTO E BOT*/
+
+blockquote#textoCitacao{
+    height: 10vh;
+
+}
+
+cite#autor {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+#bnt {
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 100px;
+    color: #000;
+    box-shadow: inset 0 0 20px
+    #00ffcc79;
+    transition: all 0.3s ease;
+}
+
+ /*transição de cor do botão */
+#bnt:hover {
+    background-color: #00ffccd0;
+    color: white;
+}
+
+@keyframes animarFundo {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
 }

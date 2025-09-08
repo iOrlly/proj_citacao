@@ -7,13 +7,19 @@
         <title>Citações</title>
     </head>
     <body>
+        <header>
+            <h1>Gerador de citações aleatórias</h1>
+        </header>
         <main>
+            
             <div class="container">
                 <blockquote id="textoCitacao">
                     Clique no botão abaixo para gerar uma citação.
                 </blockquote>
                 <cite id="autor"></cite>
-                <button onclick="gerarCitacao()">Gerar citação</button>
+                <div class="botao">
+                    <button id="bnt" onclick="gerarCitacao()">Gerar citação</button>
+                </div>
             </div>
         </main>
         <script src="gerador.js"></script>
